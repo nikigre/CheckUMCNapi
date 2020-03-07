@@ -1,5 +1,5 @@
 # CheckEMSOapi
-CheckEMSOapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number).
+CheckEMSOapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number). Slovenian instructions [here] (https://nikigre.si/preveri-emso-api/).
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ API answer:
 ```
 This example will check sent EMŠO and return validation of it.
 
-## What each JSON parameter mean
+## What each JSON parameter means
 * EMSO – EMŠO you have sent to API. (If you sent 12. numbers it will return 13. numbers long EMŠO with checksum
 * Valid – If date and checksum are correct True, else False.
 * PartsOfEMSO
