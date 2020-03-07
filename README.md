@@ -1,5 +1,5 @@
-# CheckEMSOapi
-CheckEMSOapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number). Slovenian instructions [here](https://nikigre.si/preveri-emso-api/).
+# CheckUMCNapi
+CheckUMCNapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number). Slovenian instructions [here](https://nikigre.si/preveri-emso-api/).
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ If you want to use API, make an API request to the server with any of these link
   * https://www.dev.nikigre.si/EMSO/api.php
  
  ### Variables
- To check your EMŠO set variable "emso" to EMŠO you want to check.
+ To check your UMCN set variable "emso" to UMCN you want to check.
  
  ## Example
  Link: http://dev.nikigre.si/EMSO/api.php
@@ -44,10 +44,10 @@ API answer:
     "Error": ""
 }
 ```
-This example will check sent EMŠO and return validation of it.
+This example will check sent UMCN and return validation of it.
 
 ## What each JSON parameter means
-* EMSO – EMŠO you have sent to API. (If you sent 12. numbers it will return 13. numbers long EMŠO with checksum
+* EMSO – UMCN you have sent to API. (If you sent 12. numbers it will return 13. numbers long UMCN with checksum)
 * Valid – If date and checksum are correct True, else False.
 * PartsOfEMSO
   - DD – Day of birth
@@ -65,3 +65,7 @@ This example will check sent EMŠO and return validation of it.
   - 2 – Checksum is invalid
   - 3 – Date of birth is invalid
 * Error -Description of an error
+
+## Other errors
+* Error:1 - The variable "emso" was not set correctly.
+* Error:2 - The length of UMCN must be 12 or 13 numbers.
