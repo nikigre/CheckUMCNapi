@@ -1,5 +1,5 @@
 # CheckEMSOapi
-CheckEMSOapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number). Slovenian instructions [here] (https://nikigre.si/preveri-emso-api/).
+CheckEMSOapi is an API for checking Unique Master Citizen Number (Enotna matična številka občana) that was assigned to every citizen of former Yugoslav republics of the SFR Yugoslavia. More about it you can read on Wikipedia [here](https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number). Slovenian instructions [here](https://nikigre.si/preveri-emso-api/).
 
 ## Prerequisites
 
