@@ -15,7 +15,7 @@ If you want to use API, make an API request to the server with any of these link
   * https://www.dev.nikigre.si/UMCN/api.php
  
  ### Variables
- To check your UMCN set variable "emso" to UMCN you want to check.
+ To check your UMCN set variable "umcn" to UMCN you want to check.
  
  ## Example
  Link: http://dev.nikigre.si/UMCN/api.php
@@ -67,5 +67,5 @@ This example will check sent UMCN and return validation of it.
 * Error -Description of an error
 
 ## Other errors
-* Error:1 - The variable "emso" was not set correctly.
+* Error:1 - The variable "umcn" was not set correctly.
 * Error:2 - The length of UMCN must be 12 or 13 numbers.
