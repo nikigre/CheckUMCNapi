@@ -15,17 +15,19 @@ If you want to use API, make an API request to the server with any of these link
   * https://www.dev.nikigre.si/UMCN/api.php
  
  ### Variables
- To check your UMCN set variable "umcn" to UMCN you want to check.
+ To check your UMCN set variable "umcn" to UMCN you want to check. If you want to check multiple UMCN at once, put them all in variable "umcn" separated with ",".
  
- ## Example
+ ## Examples
+ 
+ ### Example 1
  Link: http://dev.nikigre.si/UMCN/api.php
  
- GET spremenljivke:
+ GET variables:
  * umcn=0101006505075
 
 API answer:
 ```
-{
+[{
     "UMCN": "0101006505075",
     "Valid": "True",
     "PartsOfUMCN": {
@@ -42,9 +44,58 @@ API answer:
     "DateOfBirth": "2006-1-1",
     "ErrorNumber": "",
     "Error": ""
-}
+}]
 ```
 This example will check sent UMCN and return validation of it.
+
+### Example 2
+
+Link: http://dev.nikigre.si/UMCN/api.php
+ 
+ GET variables:
+ * umcn=0101006505075, 180399950524
+
+API answer:
+```
+[{
+    "UMCN": "0101006505075",
+    "Valid": "True",
+    "PartsOfUMCN": {
+        "DD": "01",
+        "MM": "01",
+        "YYY": "006",
+        "RR": "50",
+        "BBB": "507",
+        "K": "5"
+    },
+    "Checksum": 5,
+    "Gender": "F",
+    "PoliticalRegion": "Slovenia",
+    "DateOfBirth": "2006-1-1",
+    "ErrorNumber": "",
+    "Error": ""
+},
+{
+    "UMCN": "1803999705242",
+    "Valid": "True",
+    "PartsOfUMCN": {
+        "DD": "18",
+        "MM": "03",
+        "YYY": "999",
+        "RR": "70",
+        "BBB": "524",
+        "K": "2"
+    },
+    "Checksum": 2,
+    "Gender": "F",
+    "PoliticalRegion": "Serbian citizens registered abroad at a Serbian diplomatic\/consular post ",
+    "DateOfBirth": "1999-3-18",
+    "ErrorNumber": "",
+    "Error": ""
+}]
+```
+This example will check sent UMCNs and return JSON array.
+
 
 ## What each JSON parameter means
 * UMCN – UMCN you have sent to API. (If you sent 12. numbers it will return 13. numbers long UMCN with checksum)
