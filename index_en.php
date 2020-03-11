@@ -7,7 +7,7 @@
 <body>
 <form action="" method="POST">
         <label for="UMCN">UMCN:</label><input name="UMCN" type="text" maxlength="13" minlength="12" value='<?php if(isset($_POST['UMCN'])) echo $_POST['UMCN'];?>' required>
-        <input type="submit" value="Check!">
+        <input type="submit" value="Check!"> 
     </form>
     <p>
         <?php
