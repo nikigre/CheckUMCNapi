@@ -6,14 +6,14 @@
 </head>
 <body>
 <form action="" method="POST">
-        <label for="EMSO">UMCN:</label><input name="EMSO" type="text" maxlength="13" minlength="12" value='<?php if(isset($_POST['EMSO'])) echo $_POST['EMSO'];?>' required>
+        <label for="UMCN">UMCN:</label><input name="UMCN" type="text" maxlength="13" minlength="12" value='<?php if(isset($_POST['UMCN'])) echo $_POST['UMCN'];?>' required>
         <input type="submit" value="Check!">
     </form>
     <p>
         <?php
-if(isset($_POST['EMSO']))
+if(isset($_POST['UMCN']))
 {
-    $EMSO_vpis=$_POST['EMSO'];
+    $UMCN_vpis=$_POST['UMCN'];
     $ok=true;
 }
 else{
@@ -22,7 +22,7 @@ else{
 
 if($ok)
 {
-    $c = curl_init("https://www.dev.nikigre.si/EMSO/api.php?emso=" . $EMSO_vpis);
+    $c = curl_init("https://www.dev.nikigre.si/UMCN/api.php?UMCN=" . $UMCN_vpis);
     curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
 
     $html = curl_exec($c);
