@@ -40,15 +40,15 @@ if($ok)
     $json= json_decode($html, true);
 
 
-    if ($json['Valid'] == "True") {
+    if ($json[0]['Valid'] == "True") {
         echo "<p style='color:green'>Entered UMCN is valid and correct!</p>";
-    }else if($json['ErrorNumber'] == "0") {
+    }else if($json[0]['ErrorNumber'] == "0") {
         echo "<p style='color:red'>Date of birth and checksum is not correct!</p>";
-    }else if($json['ErrorNumber'] == "1") {
+    }else if($json[0]['ErrorNumber'] == "1") {
         echo "<p style='color:red'>Date of birth is not correct.</p>";
-    }else if($json['ErrorNumber'] == "2") {
+    }else if($json[0]['ErrorNumber'] == "2") {
         echo "<p style='color:red'>Checksum is not correct.</p>";   
-    }else if($json['ErrorNumber'] == "3") {
+    }else if($json[0]['ErrorNumber'] == "3") {
         echo "<p style='color:red'>Date of birth is not correct.</p>";
     }else{
         echo "<p style='color:red'>Error while checking UMCN!</p>";   
